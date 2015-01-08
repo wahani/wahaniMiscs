@@ -1,0 +1,79 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage[colorlinks = true, citecolor = black, linkcolor = black, urlcolor = black]{hyperref}
+\usepackage{color}
+\usepackage{natbib}
+\usepackage{placeins}
+\usepackage{lmodern}
+
+% Header
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{$title$}
+\fancyhead[C]{\today}
+\fancyhead[R]{$author$}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancyfoot[C]{\thepage}
+\renewcommand{\footrulewidth}{0.4pt}
+
+
+% Things for R-Code/Graphics
+
+\usepackage{graphicx}
+% Redefine \includegraphics so that, unless explicit options are
+% given, the image width will not exceed the width of the page.
+% Images get their normal width if they fit onto the page, but
+% are scaled down if they would overflow the margins.
+\makeatletter
+\def\ScaleIfNeeded{%
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+\let\Oldincludegraphics\includegraphics
+{%
+ \catcode`\@=11\relax%
+ \gdef\includegraphics{\@ifnextchar[{\Oldincludegraphics}{\Oldincludegraphics[width=\ScaleIfNeeded]}}%
+}%
+%%
+% Code Highlighting
+$if(highlighting-macros)$
+$highlighting-macros$
+$endif$
+
+
+% Things for Section-Numbering
+\setcounter{secnumdepth}{1}
+\let\section=\subsection
+\let\subsection=\subsubsection
+
+\newcommand{\keywords}{\paragraph{Keywords:}}
+
+$for(header-includes)$
+$header-includes$
+$endfor$
+
+% Document
+\begin{document}
+
+$if(keywords)$
+\keywords $keywords$
+\vskip 0.8cm
+$endif$
+
+$body$
+
+% References
+\bibliographystyle{agsm}
+\bibliography{$bibliography_file$}
+\end{document}

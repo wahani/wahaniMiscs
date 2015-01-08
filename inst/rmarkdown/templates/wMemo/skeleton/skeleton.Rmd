@@ -1,0 +1,11 @@
+---
+title: "Title"
+author: "Your Name"
+keywords: First, Second, ... up to 5 keywords
+bibliography: 
+output: wahaniMiscs:::pdf_memo
+---
+
+# Headline
+
+Headlines in this template are unnumbered. Besides that, there is not much to it.
