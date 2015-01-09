@@ -1,0 +1,4 @@
+name: fuStat beamer (PDF)
+description: >
+ Template for latex-beamer slides using fu-template.
+create_dir: true
