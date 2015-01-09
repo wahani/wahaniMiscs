@@ -5,14 +5,14 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage[onehalfspacing]{setspace}
 \usepackage[colorlinks = true, citecolor = black, linkcolor = black, urlcolor = black]{hyperref}
 \usepackage{color}
 \usepackage{natbib}
 \usepackage{placeins}
 \usepackage{lmodern}
-
+  
 % Header
-
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
@@ -24,8 +24,7 @@
 \renewcommand{\footrulewidth}{0.4pt}
 
 
-% Things for R-Code/Graphics
-
+% Things for Graphics
 \usepackage{graphicx}
 % Redefine \includegraphics so that, unless explicit options are
 % given, the image width will not exceed the width of the page.
@@ -46,6 +45,7 @@
  \gdef\includegraphics{\@ifnextchar[{\Oldincludegraphics}{\Oldincludegraphics[width=\ScaleIfNeeded]}}%
 }%
 %%
+
 % Code Highlighting
 $if(highlighting-macros)$
 $highlighting-macros$
@@ -57,8 +57,12 @@ $endif$
 \let\section=\subsection
 \let\subsection=\subsubsection
 
+% commands
 \newcommand{\keywords}{\paragraph{Keywords:}}
+\let\code=\texttt
+\renewcommand{\familydefault}{\sfdefault}
 
+% header-includes from Rmd
 $for(header-includes)$
 $header-includes$
 $endfor$
