@@ -1,10 +1,9 @@
-pdf_memo <- function(...) {
+pdf_memo <- function(..., fig_width = 6.5, fig_height = 3.5) {
   template <- find_resource("wMemo", "template.tex")
   rmarkdown::pdf_document(
     template = template,
-    keep_tex = FALSE,
-    fig_width = 6.5,
-    fig_height = 3.5,
+    fig_width = fig_width,
+    fig_height = fig_height,
     ...
   )
 }

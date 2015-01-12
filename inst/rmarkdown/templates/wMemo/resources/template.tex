@@ -8,10 +8,9 @@
 \usepackage[onehalfspacing]{setspace}
 \usepackage[colorlinks = true, citecolor = black, linkcolor = black, urlcolor = black]{hyperref}
 \usepackage{color}
-\usepackage{natbib}
 \usepackage{placeins}
 \usepackage{lmodern}
-  
+
 % Header
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -22,6 +21,11 @@
 \renewcommand{\headrulewidth}{0.4pt}
 \fancyfoot[C]{\thepage}
 \renewcommand{\footrulewidth}{0.4pt}
+
+% bibliography
+%\usepackage{biblatex}
+\usepackage{natbib}
+\bibliographystyle{agsm}
 
 
 % Things for Graphics
@@ -78,6 +82,6 @@ $endif$
 $body$
 
 % References
-\bibliographystyle{agsm}
-\bibliography{$bibliography_file$}
+\bibliography{$bibliography$}
+
 \end{document}
