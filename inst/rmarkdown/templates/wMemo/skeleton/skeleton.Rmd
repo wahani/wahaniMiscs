@@ -1,7 +1,8 @@
 ---
+layout: post
 title: "Title"
-author: "Your Name"
-keywords: First, Second, ... up to 5 keywords
+author: "Sebastian"
+categories:
 bibliography: 
 output: wahaniMiscs:::pdf_memo
 ---
