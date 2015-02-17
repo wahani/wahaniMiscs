@@ -9,6 +9,6 @@ getLocalPackageUpdates <- function(package) {
   cat("Version on CRAN:", cranVersion, "\n")
   cat("Development Version:", localVersion, "\n\n")
   cat("Updates in package NEWS-file since last release to CRAN:\n\n")
-  print(news(Version > cranVersion, package = package))
+  print(do.call(news, list(query = quote(Version > cranVersion), package = package)))
   invisible(NULL)
 }

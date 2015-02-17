@@ -1,3 +1,8 @@
+#' Continously run make
+#'
+#' @param path character
+#' @param nodosfilewarning logical
+#'
 #' @export
 watch <- function(path = ".", nodosfilewarning = TRUE) {
 
