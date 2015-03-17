@@ -12,7 +12,6 @@
 #' @param e2 rhs
 #'
 #' @aliases $,instance,init $,instance,remove
-
 #'
 #' @rdname Directory
 #' @export
