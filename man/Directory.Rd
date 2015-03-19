@@ -10,6 +10,7 @@
 \alias{-,Directory,character-method}
 \alias{/,Directory,character-method}
 \alias{Directory}
+\alias{as.character,Directory-method}
 \alias{show,Directory-method}
 \title{Class for working with directories}
 \usage{
@@ -28,6 +29,8 @@ instance$remove(...)
 \S4method{+}{character,Directory}(e1, e2)
 
 \S4method{+}{Directory,Directory}(e1, e2)
+
+\S4method{as.character}{Directory}(x, ...)
 }
 \arguments{
 \item{...}{arguments passed to init}

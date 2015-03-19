@@ -4,7 +4,7 @@ Version: 0.0.1
 Authors@R: "Sebastian Warnholz <wahani@gmail.com> [aut, cre]"
 Description: Collection of functions and tools I use.
 Depends: R (>= 3.1.2), methods
-Imports: rmarkdown, aoos
+Imports: rmarkdown, aoos, functional
 License: GPL-3 | file LICENSE
 LazyData: true
 Encoding: UTF-8

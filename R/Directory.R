@@ -82,3 +82,10 @@ setMethod("+", c(e1 = "Directory", e2 = "Directory"),
             file.copy(e2$getDirName(), e1$getDirName(), recursive = TRUE)
             e1
           })
+
+#' @export
+#' @rdname Directory
+setMethod("as.character", "Directory",
+          function(x, ...) {
+            x$getDirName()
+          })
