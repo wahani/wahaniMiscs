@@ -2,8 +2,10 @@
 
 export(Directory)
 export(getLocalPackageUpdates)
+export(getPandocPath)
 export(init_thesis)
 export(make)
+export(setPathVariable)
 export(watch)
 exportMethods("+")
 exportMethods("-")

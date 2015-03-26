@@ -24,7 +24,7 @@ watch <- function(path = ".", nodosfilewarning = TRUE) {
 
 #' Run make in a folder
 #'
-#' @param path character
+#' @param ... characters passed as arguments in \code{\link{system2}}
 #'
 #' @rdname makeAndFriends
 #'
@@ -39,4 +39,20 @@ make <- function(..., path = ".") {
 
 setNDFW <- function() {
   Sys.setenv(CYGWIN="nodosfilewarning")
+}
+
+#' @export
+#' @rdname makeAndFriends
+setPathVariable <- function(...) {
+  args <- lapply(..., normalizePath)
+  currentPath <- Sys.getenv("PATH")
+  newPath <- do.call(paste, c(list(currentPath), args, sep = ";"))
+  Sys.setenv(PATH = newPath)
+}
+
+
+#' @export
+#' @rdname makeAndFriends
+getPandocPath <- function() {
+  dirname(rmarkdown:::pandoc())
 }
