@@ -17,7 +17,7 @@
 #' @export
 Directory <- defineClass("Directory", {
 
-  dirName <- getwd()
+  dirName <- private(getwd())
 
   init <- function(name) {
     if(!missing(name)) {
@@ -29,13 +29,13 @@ Directory <- defineClass("Directory", {
     }
   }
 
-  getDirName <- public(function() dirName)
+  getDirName <- function() dirName
 
-  remove <- public(function(...) {
+  remove <- function(...) {
     filesInDir <- list.files(path = dirName, ...)
     if(length(filesInDir)) self - filesInDir else message("No files in directory!")
     invisible(self)
-  })
+  }
 
 })
 
