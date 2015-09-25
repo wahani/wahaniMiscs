@@ -4,7 +4,7 @@
 #'
 #' @param dir character
 #'
-#' @details This structure expects \code{pandoc}, \code{make} and \code{latex} to be installed.In Windows should add those programs to your \code{PATH} variable plus \code{RScript}.
+#' @details This structure expects \code{pandoc}, \code{make} and \code{latex} to be installed. In Windows should add those programs to your \code{PATH} variable plus \code{RScript}.
 #'
 #' @export
 init_thesis <- function(dir = ".") {
