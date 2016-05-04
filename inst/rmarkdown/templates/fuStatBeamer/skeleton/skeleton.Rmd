@@ -1,6 +1,7 @@
 ---
 title: "Untitled"
 author: "Your Name"
+institute: Statistische Beratungseinheit der FU Berlin
 bibliography: 
 output: wahaniMiscs:::fu_stat_beamer
 ---
